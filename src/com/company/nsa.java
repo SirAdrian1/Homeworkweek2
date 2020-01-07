@@ -3,24 +3,39 @@ package com.company;
 public class nsa {
 
 
+    // Java program to print
+// all primes less than N
+    static class GFG
+    {
+        // function check whether
+// a number is prime or not
+        static boolean isPrime(int n)
+        {
+// Corner case
+            if (n <= 1)
+                return false;
 
+// Check from 2 to n-1
+            for (int i = 2; i < n; i++)
+                if (n % i == 0)
+                    return false;
 
-    
-    public static boolean isPalindrome(int number) {
-        int palindrome = number; // copied number into variable
-        int reverse = 0;
-
-        while (palindrome != 0) {
-            int remainder = palindrome % 10;
-            reverse = reverse * 10 + remainder;
-            palindrome = palindrome / 10;
-        }
-
-        // if original and reverse of number is equal means
-        // number is palindrome in Java
-        if (number == reverse) {
             return true;
         }
-        return false;
+
+        // Function to print primes
+        static void printPrime(int n)
+        {
+            for (int i = 2; i <= n; i++)
+            {
+                if (isPrime(i))
+                    System.out.print(i + " ");
+            }
+        }
+
+
+
+
+
     }
 }
